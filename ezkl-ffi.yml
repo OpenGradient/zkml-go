@@ -27,6 +27,7 @@ GENERATOR:
       "-framework IOKit",
       "-framework IOSurface",
       "-framework AppKit",
+      "-framework SystemConfiguration",
     ]}
 
 PARSER:
