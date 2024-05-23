@@ -9,6 +9,7 @@ $(DEPS): .install-ezkl-ffi  ;
 	cd rust && cargo build --release --all; cd ..
 	find ./rust/target/release -type f -name "ezkl-ffi.h" -print0 | xargs -0 ls -t | head -n 1 | xargs -I {} cp {} ./cgo/ezkl-ffi.h
 	find ./rust/target/release -type f -name "libezkl_ffi.a" -print0 | xargs -0 ls -t | head -n 1 | xargs -I {} cp {} ./cgo/libezkl_ffi.a
+	find ./rust/target/release -type f -name "libezkl_ffi.a" -print0 | xargs -0 ls -t | head -n 1 | xargs -I {} sudo cp {} /usr/local/lib/libezkl_ffi.a
 	c-for-go --ccincl ezkl-ffi.yml
 	@touch $@
 
@@ -18,4 +19,5 @@ clean:
 	rm -rf cgo/*.go
 	rm -rf cgo/*.h
 	rm -rf cgo/*.a
+	sudo rm /usr/local/lib/libezkl_ffi.a
 .PHONY: clean
