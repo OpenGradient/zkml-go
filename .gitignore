@@ -8,4 +8,4 @@
 *.dylib
 **/.install-ezkl-ffi
 **/*.a
-**/*.h
+# **/*.h
