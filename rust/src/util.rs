@@ -152,7 +152,7 @@ pub(crate) fn verify(
         Commitments::KZG => {
             let params: ParamsKZG<Bn256> =
                 halo2_proofs::poly::commitment::Params::<'_, G1Affine>::read(&mut reader)
-                    .map_err(|e| Error::msg(format!("Failed to deserialize params: {}", e)))?;
+                    .map_err(|e| Error::msg(format!("Failed to deserialize KZG params: {}", e)))?;
             let strategy = KZGSingleStrategy::new(params.verifier_params());
             match proof.transcript_type {
                 TranscriptType::EVM => verify_proof_circuit::<
@@ -177,7 +177,7 @@ pub(crate) fn verify(
         Commitments::IPA => {
             let params: ParamsIPA<_> =
                 halo2_proofs::poly::commitment::Params::<'_, G1Affine>::read(&mut reader)
-                    .map_err(|e| Error::msg(format!("Failed to deserialize params: {}", e)))?;
+                    .map_err(|e| Error::msg(format!("Failed to deserialize IPA params: {}", e)))?;
             let strategy = IPASingleStrategy::new(params.verifier_params());
             match proof.transcript_type {
                 TranscriptType::EVM => verify_proof_circuit::<
@@ -215,7 +215,7 @@ pub fn gen_vk(
     let mut reader = std::io::BufReader::new(&params_ser[..]);
     let params: ParamsKZG<Bn256> =
         halo2_proofs::poly::commitment::Params::<'_, G1Affine>::read(&mut reader)
-            .map_err(|e| Error::msg(format!("Failed to deserialize params: {}", e)))?;
+            .map_err(|e| Error::msg(format!("Failed to deserialize G1 params: {}", e)))?;
     // Read in compiled circuit
     let circuit: GraphCircuit = bincode::deserialize(&compiled_circuit[..])
         .map_err(|e| Error::msg(format!("Failed to deserialize compiled model: {}", e)))?;
@@ -262,7 +262,7 @@ pub fn gen_pk(
     let mut reader = std::io::BufReader::new(&params_ser[..]);
     let params: ParamsKZG<Bn256> =
         halo2_proofs::poly::commitment::Params::<'_, G1Affine>::read(&mut reader)
-            .map_err(|e| Error::msg(format!("Failed to deserialize params: {}", e)))?;
+            .map_err(|e| Error::msg(format!("Failed to deserialize G1 params: {}", e)))?;
     // Read in compiled circuit
     let circuit: GraphCircuit = bincode::deserialize(&compiled_circuit[..])
         .map_err(|e| Error::msg(format!("Failed to deserialize compiled model: {}", e)))?;
