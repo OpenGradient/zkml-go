@@ -17,7 +17,7 @@ halo2curves = { git = "https://github.com/privacy-scaling-explorations/halo2curv
 snark-verifier = { git = "https://github.com/zkonduit/snark-verifier", branch = "ac/chunked-mv-lookup", features = [
     "derive_serde",
 ] }
-ezkl = { tag = "v11.0.6", git = "https://github.com/zkonduit/ezkl" }
+ezkl = { tag = "v10.4.2", git = "https://github.com/zkonduit/ezkl" }
 serde_json = { version = "1.0.97", default_features = false, features = [
     "float_roundtrip",
     "raw_value",

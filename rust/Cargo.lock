@@ -1156,12 +1156,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0d6ef0072f8a535281e4876be788938b528e9a1d43900b82c2569af7da799125"
 
 [[package]]
-name = "dyn-hash"
-version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a650a461c6a8ff1ef205ed9a2ad56579309853fecefc2423f73dced342f92258"
-
-[[package]]
 name = "ecc"
 version = "0.1.0"
 source = "git+https://github.com/zkonduit/halo2wrong?branch=ac/chunked-mv-lookup#b43ebe30e84825d0d004fa27803d99c4187d419f"
@@ -1622,7 +1616,7 @@ dependencies = [
 [[package]]
 name = "ezkl"
 version = "0.0.0"
-source = "git+https://github.com/zkonduit/ezkl?tag=v11.0.6#113d40be05b3426aab40195dea3f2d5468164775"
+source = "git+https://github.com/zkonduit/ezkl?tag=v10.4.2#924f7c0420a6152754f1e3b12f7f0254a4d36817"
 dependencies = [
  "ark-std 0.3.0",
  "bincode",
@@ -4914,8 +4908,8 @@ dependencies = [
 
 [[package]]
 name = "tract-core"
-version = "0.21.5-pre"
-source = "git+https://github.com/sonos/tract/?rev=05ebf550aa9922b221af4635c21a67a8d2af12a9#05ebf550aa9922b221af4635c21a67a8d2af12a9"
+version = "0.21.3"
+source = "git+https://github.com/sonos/tract/?rev=681a096f02c9d7d363102d9fb0e446d1710ac2c8#681a096f02c9d7d363102d9fb0e446d1710ac2c8"
 dependencies = [
  "anyhow",
  "bit-set",
@@ -4938,12 +4932,10 @@ dependencies = [
 
 [[package]]
 name = "tract-data"
-version = "0.21.5-pre"
-source = "git+https://github.com/sonos/tract/?rev=05ebf550aa9922b221af4635c21a67a8d2af12a9#05ebf550aa9922b221af4635c21a67a8d2af12a9"
+version = "0.21.3"
+source = "git+https://github.com/sonos/tract/?rev=681a096f02c9d7d363102d9fb0e446d1710ac2c8#681a096f02c9d7d363102d9fb0e446d1710ac2c8"
 dependencies = [
  "anyhow",
- "downcast-rs",
- "dyn-hash",
  "half",
  "itertools 0.12.1",
  "lazy_static",
@@ -4959,8 +4951,8 @@ dependencies = [
 
 [[package]]
 name = "tract-hir"
-version = "0.21.5-pre"
-source = "git+https://github.com/sonos/tract/?rev=05ebf550aa9922b221af4635c21a67a8d2af12a9#05ebf550aa9922b221af4635c21a67a8d2af12a9"
+version = "0.21.3"
+source = "git+https://github.com/sonos/tract/?rev=681a096f02c9d7d363102d9fb0e446d1710ac2c8#681a096f02c9d7d363102d9fb0e446d1710ac2c8"
 dependencies = [
  "derive-new",
  "log",
@@ -4969,14 +4961,13 @@ dependencies = [
 
 [[package]]
 name = "tract-linalg"
-version = "0.21.5-pre"
-source = "git+https://github.com/sonos/tract/?rev=05ebf550aa9922b221af4635c21a67a8d2af12a9#05ebf550aa9922b221af4635c21a67a8d2af12a9"
+version = "0.21.3"
+source = "git+https://github.com/sonos/tract/?rev=681a096f02c9d7d363102d9fb0e446d1710ac2c8#681a096f02c9d7d363102d9fb0e446d1710ac2c8"
 dependencies = [
  "cc",
  "derive-new",
  "downcast-rs",
  "dyn-clone",
- "dyn-hash",
  "half",
  "lazy_static",
  "liquid",
@@ -4994,8 +4985,8 @@ dependencies = [
 
 [[package]]
 name = "tract-nnef"
-version = "0.21.5-pre"
-source = "git+https://github.com/sonos/tract/?rev=05ebf550aa9922b221af4635c21a67a8d2af12a9#05ebf550aa9922b221af4635c21a67a8d2af12a9"
+version = "0.21.3"
+source = "git+https://github.com/sonos/tract/?rev=681a096f02c9d7d363102d9fb0e446d1710ac2c8#681a096f02c9d7d363102d9fb0e446d1710ac2c8"
 dependencies = [
  "byteorder",
  "flate2",
@@ -5008,8 +4999,8 @@ dependencies = [
 
 [[package]]
 name = "tract-onnx"
-version = "0.21.5-pre"
-source = "git+https://github.com/sonos/tract/?rev=05ebf550aa9922b221af4635c21a67a8d2af12a9#05ebf550aa9922b221af4635c21a67a8d2af12a9"
+version = "0.21.3"
+source = "git+https://github.com/sonos/tract/?rev=681a096f02c9d7d363102d9fb0e446d1710ac2c8#681a096f02c9d7d363102d9fb0e446d1710ac2c8"
 dependencies = [
  "bytes",
  "derive-new",
@@ -5025,8 +5016,8 @@ dependencies = [
 
 [[package]]
 name = "tract-onnx-opl"
-version = "0.21.5-pre"
-source = "git+https://github.com/sonos/tract/?rev=05ebf550aa9922b221af4635c21a67a8d2af12a9#05ebf550aa9922b221af4635c21a67a8d2af12a9"
+version = "0.21.3"
+source = "git+https://github.com/sonos/tract/?rev=681a096f02c9d7d363102d9fb0e446d1710ac2c8#681a096f02c9d7d363102d9fb0e446d1710ac2c8"
 dependencies = [
  "getrandom",
  "log",
